@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cora Citation Network GCN Explorer | Jayant Sharma</title>
-  <meta name="description" content="Interactive UI for Graph Convolutional Network (GCN) node classification on the Cora Citation Network using ONNX Runtime and FastAPI.">
+  <meta name="description"
+    content="Interactive UI for Graph Convolutional Network (GCN) node classification on the Cora Citation Network using ONNX Runtime and FastAPI.">
   <meta name="author" content="Jayant Sharma">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
 
   <!-- Background Animated Gradient Orbs -->
@@ -52,7 +57,7 @@
 
   <!-- Main Container -->
   <main class="app-main">
-    
+
     <!-- Hero / Metrics Strip -->
     <section class="metrics-banner">
       <div class="metric-card">
@@ -63,21 +68,24 @@
         </div>
       </div>
 
-      <div class="metric-card cyan"><div class="metric-icon cyan"><i class="fa-solid fa-share-nodes"></i></div>
+      <div class="metric-card cyan">
+        <div class="metric-icon cyan"><i class="fa-solid fa-share-nodes"></i></div>
         <div class="metric-content">
           <div class="metric-value">10,556</div>
           <div class="metric-label">Citations (Edges)</div>
         </div>
       </div>
 
-      <div class="metric-card emerald"><div class="metric-icon emerald"><i class="fa-solid fa-tags"></i></div>
+      <div class="metric-card emerald">
+        <div class="metric-icon emerald"><i class="fa-solid fa-tags"></i></div>
         <div class="metric-content">
           <div class="metric-value">1,433</div>
           <div class="metric-label">Vocabulary Features</div>
         </div>
       </div>
 
-      <div class="metric-card amber"><div class="metric-icon amber"><i class="fa-solid fa-layer-group"></i></div>
+      <div class="metric-card amber">
+        <div class="metric-icon amber"><i class="fa-solid fa-layer-group"></i></div>
         <div class="metric-content">
           <div class="metric-value">7</div>
           <div class="metric-label">Topic Classes</div>
@@ -101,7 +109,7 @@
     <!-- TAB 1: CORA BENCHMARK EXPLORER -->
     <section class="tab-content active" id="tab-cora">
       <div class="explorer-grid">
-        
+
         <!-- Left Panel: Input & Quick Select -->
         <div class="card glass-card">
           <div class="card-header">
@@ -160,7 +168,7 @@
 
             <!-- Results Content (hidden until predicted) -->
             <div class="results-container hidden" id="cora-results-container">
-              
+
               <!-- Predicted Topic Card -->
               <div class="prediction-hero-card">
                 <div class="pred-label">Predicted Topic</div>
@@ -198,12 +206,13 @@
       <div class="card glass-card">
         <div class="card-header">
           <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Classify Custom Research Papers & Citation Graph</h3>
-          <p>Construct a custom graph with paper feature vectors and citation edges to evaluate the ONNX GCN model via <code>POST /predict</code>.</p>
+          <p>Construct a custom graph with paper feature vectors and citation edges to evaluate the ONNX GCN model via
+            <code>POST /predict</code>.</p>
         </div>
 
         <div class="card-body">
           <div class="custom-builder-grid">
-            
+
             <!-- Left: Builder Controls -->
             <div class="builder-controls">
               <div class="form-group">
@@ -262,7 +271,7 @@
     <!-- TAB 3: ONNX MODEL METADATA & BENCHMARK -->
     <section class="tab-content" id="tab-model">
       <div class="model-grid">
-        
+
         <!-- ONNX Spec Card -->
         <div class="card glass-card">
           <div class="card-header">
@@ -315,9 +324,10 @@
                 <i class="fa-solid fa-stopwatch"></i> Run Latency Benchmark
               </button>
             </div>
-            
+
             <div class="benchmark-details" id="bench-details">
-              <p><i class="fa-solid fa-circle-info"></i> Click the button above to run 5 benchmark iterations over the full Cora citation graph.</p>
+              <p><i class="fa-solid fa-circle-info"></i> Click the button above to run 5 benchmark iterations over the
+                full Cora citation graph.</p>
             </div>
           </div>
         </div>
@@ -329,10 +339,12 @@
 
   <!-- Footer -->
   <footer class="app-footer">
-    <p>Cora Citation Network GCN Explorer &bull; Developed by <strong>Jayant Sharma</strong> &bull; Powered by <strong>PyTorch Geometric</strong>, <strong>ONNX Runtime</strong> & <strong>FastAPI</strong></p>
+    <p>Cora Citation Network GCN Explorer &bull; Developed by <strong>Jayant Sharma</strong> &bull; Powered by
+      <strong>PyTorch Geometric</strong>, <strong>ONNX Runtime</strong> & <strong>FastAPI</strong></p>
   </footer>
 
   <!-- App Script -->
   <script src="/app.js"></script>
 </body>
+
 </html>
